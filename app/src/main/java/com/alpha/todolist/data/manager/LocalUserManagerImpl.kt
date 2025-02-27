@@ -7,7 +7,7 @@ import androidx.datastore.preferences.core.booleanPreferencesKey
 import androidx.datastore.preferences.core.edit
 import androidx.datastore.preferences.preferencesDataStore
 import com.alpha.todolist.domain.manager.LocalUserManager
-import com.alpha.todolist.util.Constants
+import com.alpha.todolist.data.util.values.Constants
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
 
@@ -59,5 +59,4 @@ preferencesDataStore(name = Constants.SETTINGS_FILE_NAME)
 private object PreferencesKeys {
     val isDarkTheme = booleanPreferencesKey(Constants.SETTINGS_FILE_NAME_IS_DARK_THEME)
     val isAppEntrySkipped = booleanPreferencesKey(Constants.SETTINGS_FILE_NAME_IS_APP_ENTRY_SKIPPED)
-
 }

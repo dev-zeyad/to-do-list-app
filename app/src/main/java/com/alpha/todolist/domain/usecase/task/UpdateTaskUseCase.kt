@@ -4,9 +4,9 @@ import com.alpha.todolist.domain.model.task.Task
 import com.alpha.todolist.domain.repository.task.TaskRepository
 
 class UpdateTaskUseCase(
-    private val repo : TaskRepository
+    private val taskRepo : TaskRepository
 ) {
     suspend operator fun invoke(task: Task):Int{
-        return repo.updateTask(task)
+        return taskRepo.updateTask(task)
     }
 }

@@ -99,8 +99,8 @@ dependencies {
     //allow older Android versions to use Java 8+ APIs
     coreLibraryDesugaring("com.android.tools:desugar_jdk_libs:2.1.4")
 
-
-
+    //json-to-string || opposite
+    implementation("com.google.code.gson:gson:2.12.1")
 
 
 

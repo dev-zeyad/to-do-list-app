@@ -6,28 +6,28 @@ import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
 import androidx.room.Update
+import com.alpha.todolist.data.local.entity.task.TaskEntity
 import com.alpha.todolist.domain.model.task.Category
-import com.alpha.todolist.domain.model.task.Task
 import kotlinx.coroutines.flow.Flow
 
 @Dao
 interface TaskDao {
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun insertTask(task: Task): Long
+    suspend fun insertTask(task: TaskEntity): Long
 
     @Update(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun updateTask(task: Task): Int
+    suspend fun updateTask(task: TaskEntity): Int
 
     @Delete
-    suspend fun delete(task: Task): Int
+    suspend fun delete(task: TaskEntity): Int
 
 
     @Query("SELECT * FROM task_table WHERE category LIKE :category")
-    fun getTasks(category: Category): Flow<List<Task>>
+    fun getTasks(category: Category): Flow<List<TaskEntity>>
 
 
     @Query("SELECT * FROM task_table WHERE date IN (:dateRange)")
-    fun getTasks(dateRange: LongRange): Flow<List<Task>>
+    fun getTasks(dateRange: LongRange): Flow<List<TaskEntity>>
 
 }

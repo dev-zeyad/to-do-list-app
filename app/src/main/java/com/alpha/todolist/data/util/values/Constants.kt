@@ -1,4 +1,4 @@
-package com.alpha.todolist.util
+package com.alpha.todolist.data.util.values
 
 object Constants {
 

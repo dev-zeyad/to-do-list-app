@@ -1,0 +1,127 @@
+ init {
+        /**
+         * If API 26+, use java.time.LocalDateTime (modern, best choice).
+         * If supporting older versions, use Calendar (common, compatible but outdated).
+         */
+        System.currentTimeMillis()
+        Calendar.getInstance()
+        LocalDateTime.now()
+        Date().time
+        Clock.systemUTC().instant()
+
+        val currentTime = Calendar.getInstance()
+        listOf(
+            Calendar.ERA,
+            Calendar.YEAR,
+            Calendar.MONTH,
+            Calendar.WEEK_OF_YEAR,
+            Calendar.WEEK_OF_MONTH,
+            Calendar.DATE,
+            Calendar.DAY_OF_MONTH,
+            Calendar.DAY_OF_YEAR,
+            Calendar.DAY_OF_WEEK,
+            Calendar.DAY_OF_WEEK_IN_MONTH,
+            Calendar.AM_PM,
+            Calendar.HOUR,
+            Calendar.HOUR_OF_DAY,
+            Calendar.MINUTE,
+            Calendar.SECOND,
+            Calendar.MILLISECOND,
+            Calendar.ZONE_OFFSET,
+            Calendar.DST_OFFSET,
+            Calendar.FIELD_COUNT,
+            Calendar.SUNDAY,
+            Calendar.TUESDAY,
+            Calendar.WEDNESDAY,
+            Calendar.THURSDAY,
+            Calendar.FRIDAY,
+            Calendar.SATURDAY,
+            Calendar.JANUARY,
+            Calendar.FEBRUARY,
+            Calendar.MARCH,
+            Calendar.APRIL,
+            Calendar.MAY,
+            Calendar.JUNE,
+            Calendar.JULY,
+            Calendar.AUGUST,
+            Calendar.SEPTEMBER,
+            Calendar.OCTOBER,
+            Calendar.NOVEMBER,
+            Calendar.DECEMBER,
+            Calendar.UNDECIMBER,
+            Calendar.AM,
+            Calendar.PM,
+            Calendar.ALL_STYLES,
+            Calendar.SHORT,
+            Calendar.LONG,
+            Calendar.NARROW_FORMAT,
+            Calendar.NARROW_STANDALONE,
+            Calendar.SHORT_FORMAT,
+            Calendar.LONG_FORMAT,
+            Calendar.SHORT_STANDALONE,
+            Calendar.LONG_STANDALONE
+        ).forEach {
+           println(currentTime[it])
+        }
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+           /*
+            * todo use only these fnuction and properties
+            * val calendar = Calendar.getInstance()
+            * calendar.get()
+            * calendar.set()
+            * calendar.add()
+            *
+    //        * WEEK_OF_YEAR	9	The week number of the year
+    //        * DAY_OF_YEAR	58	The day of the year (1–365 or 366 in a leap year)
+    //        * HOUR	2	12-hour format (0-11)
+
+            * YEAR	2025	The current year
+            * MONTH	1 (February)	0-based (Jan = 0, Feb = 1, ...)
+            * WEEK_OF_MONTH	4	The week number within the month
+            * DAY_OF_MONTH	27	The day of the month (1–31)
+            * DAY_OF_WEEK	5 (Thursday)	1 = Sunday, 2 = Monday, ..., 7 = Saturday
+            * AM_PM	1 (PM)	0 = AM, 1 = PM
+            * HOUR_OF_DAY	14	24-hour format (0-23)
+            * MINUTE	45	Current minute (0-59)
+            * SECOND	30	Current second (0-59)
+            * MILLISECOND	123	Milliseconds (0-999)
+            *
+            * calendar.timeInMillis// Timestamp
+            * calendar.time //Thu Feb 27 15:30:45 GMT 2025
+            * calendar.time = Date(timestamp)	Convert timestamp to Calendar
+            *
+            *
+            *
+            * todo If you want to format a date or time property into a specific format,
+            * val timeFormat = SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.getDefault()).format(calendar.time)
+            * you can use SimpleDateFormat (for all Android versions)
+            *
+            * Pattern	Output Example	Meaning
+            * yyyy	2025	Year
+            * MM	02	Month (02 = February)
+            * dd	27	Day of the month
+            * HH	15	Hour (24-hour format)
+            * hh	03	Hour (12-hour format)
+            * mm	30	Minutes
+            * ss	45	Seconds
+            * a	PM	AM/PM
+            * EEE	Thu	Short weekday (Thu for Thursday)
+            * EEEE	Thursday	Full weekday
+            * MMM	Feb	Short month name
+            * MMMM	February	Full month name
+            *
+            *
+            *
+            */

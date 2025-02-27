@@ -6,9 +6,9 @@ import com.alpha.todolist.domain.repository.task.TaskRepository
 import kotlinx.coroutines.flow.Flow
 
 class GetTasksByCategoryUseCase(
-    private val repo : TaskRepository
+    private val taskRepo : TaskRepository
 ) {
     operator fun invoke(category: Category): Flow<List<Task>> {
-        return repo.getTasksByCategory(category)
+        return taskRepo.getTasksByCategory(category)
     }
 }
