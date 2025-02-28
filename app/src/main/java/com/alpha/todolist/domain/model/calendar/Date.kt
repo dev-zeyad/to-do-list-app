@@ -1,5 +1,8 @@
-package com.alpha.todolist.domain.model.task
+package com.alpha.todolist.domain.model.calendar
 
+/**
+ * formatted as calendar class api
+ */
 data class Date(
     /**
      * ex:2025

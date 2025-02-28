@@ -1,6 +1,6 @@
 package com.alpha.todolist.domain.usecase.task
 
-import com.alpha.todolist.domain.model.task.DateRange
+import com.alpha.todolist.domain.model.calendar.DateRange
 import com.alpha.todolist.domain.model.task.Task
 import com.alpha.todolist.domain.provider.task.CalendarProvider
 import com.alpha.todolist.domain.repository.task.TaskRepository
@@ -8,7 +8,7 @@ import kotlinx.coroutines.flow.Flow
 
 class GetTasksByDateRange(
     private val taskRepo: TaskRepository,
-    private val calendarProv: CalendarProvider
+    private val calendarProv: CalendarProvider.CalendarDateRange
 ) {
     operator fun invoke(dateRange: DateRange): Flow<List<Task>> {
 
