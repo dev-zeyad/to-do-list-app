@@ -78,7 +78,7 @@
 
 
            /*
-            * todo use only these fnuction and properties
+            * todo use only these function and properties
             * val calendar = Calendar.getInstance()
             * calendar.get()
             * calendar.set()

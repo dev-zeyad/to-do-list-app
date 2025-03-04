@@ -1,0 +1,7 @@
+interface command //(remote control abstraction button)
+interface Receiver // (TV receiver)
+class command(private val receiver:Receiver, private val modelObj:Model) : command  //(remote control buttons)
+class invoker //(remote control sender)
+
+
+

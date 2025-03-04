@@ -27,7 +27,7 @@ interface TaskDao {
     fun getTasks(category: Category): Flow<List<TaskEntity>>
 
 
-    @Query("SELECT * FROM task_table WHERE date IN (:dateRange)")
-    fun getTasks(dateRange: LongRange): Flow<List<TaskEntity>>
+    @Query("SELECT * FROM task_table WHERE date BETWEEN :rangeStart AND :rangeEnd")
+    fun getTasks(rangeStart:Long, rangeEnd:Long): Flow<List<TaskEntity>>
 
 }

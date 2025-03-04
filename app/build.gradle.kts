@@ -6,6 +6,9 @@ plugins {
     id("com.google.devtools.ksp")
 }
 
+ksp {
+    this.arg("room.schemaLocation", "$projectDir/schemas")
+}
 
 android {
     namespace = "com.alpha.todolist"
@@ -21,11 +24,6 @@ android {
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables {
             useSupportLibrary = true
-        }
-        javaCompileOptions {
-            annotationProcessorOptions {
-                arguments["room.schemaLocation"] = "$projectDir/schema"
-            }
         }
     }
 
@@ -82,10 +80,10 @@ dependencies {
     implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.8.7")
 
     //Progress Indicator
-    implementation("androidx.compose.material3:material3-android:1.2.0-rc01")
+    implementation("androidx.compose.material3:material3-android:1.3.1") // if some functionality doesn't work downgrade to 1.2.0-rc01
 
     //Compose Foundation
-    implementation("androidx.compose.foundation:foundation:1.4.3")
+    implementation("androidx.compose.foundation:foundation:1.7.8") // if some functionality doesn't work downgrade to 1.4.3
 
     //Accompanist
     implementation("com.google.accompanist:accompanist-systemuicontroller:0.36.0")
