@@ -87,9 +87,6 @@ dependencies {
     //Compose Foundation
     implementation("androidx.compose.foundation:foundation:1.4.3")
 
-    //Accompanist
-    implementation("com.google.accompanist:accompanist-systemuicontroller:0.36.0")
-
     //Coil
     implementation("io.coil-kt:coil-compose:2.7.0")
 
